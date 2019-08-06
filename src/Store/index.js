@@ -14,6 +14,13 @@ class CalculatorStore {
     if (char === lastChar) return false;
     return true;
   }
+
+  @action.bound
+  deleteCharFromExpressionInput() {
+    if (this.expressionInput.length > 0) {
+      this.expressionInput = this.expressionInput.slice(0, -1);
+    }
+  }
 }
 
 export default CalculatorStore;
