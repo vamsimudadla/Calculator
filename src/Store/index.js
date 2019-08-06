@@ -23,7 +23,7 @@ class CalculatorStore {
   }
 
   @computed get result() {
-    return eval(this.expressionInput);
+    if (this.expressionInput.length > 0) return eval(this.expressionInput);
   }
 }
 
