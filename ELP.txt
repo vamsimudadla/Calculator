@@ -1,0 +1,14 @@
+Store
+    -@observable expressionInput[]
+    -@action addCharToExpressionInput
+    -@action deleteCharFromExpressionInput
+    -@action clearResult
+    -@computed result
+
+<Calculator>
+    <ExpressionInputBox></ExpressionInputBox>
+    <ResultBox></ResultBox>
+    <Buttons>
+        <Button></Button>
+    </Buttons>
+</Calculator>
