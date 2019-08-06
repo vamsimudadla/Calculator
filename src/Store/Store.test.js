@@ -1,3 +1,4 @@
+import CalculatorStore from "./index";
 describe("Store Test Cases", () => {
   it("should add character to expression Input", () => {
     const calculatorStore = new CalculatorStore();
