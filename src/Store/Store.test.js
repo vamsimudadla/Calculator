@@ -22,4 +22,12 @@ describe("Store Test Cases", () => {
     calculatorStore.addCharToExpressionInput(2);
     expect(calculatorStore.result).toBe(3);
   });
+
+  it("should clear expressionInput", () => {
+    expect(calculatorStore.expressionInput.length).toBe(2);
+    calculatorStore.addCharToExpressionInput(2);
+    expect(calculatorStore.result).toBe(3);
+    calculatorStore.clearResult();
+    expect(calculatorStore.expressionInput.length).toBe(0);
+  });
 });
