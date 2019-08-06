@@ -4,10 +4,10 @@ import CharacterButton from "./index";
 describe("Button test cases", () => {
   it("should call parent funtion with event.target.value", () => {
     const addCharToExpressionInput = jest.fn();
-    const { getByText } = render(
+    const { getByTestId } = render(
       <CharacterButton addCharToExpressionInput={addCharToExpressionInput} />
     );
-    const button = getByText("1");
+    const button = getByTestId("vamsi");
     const event = {
       target: {
         value: "1"
