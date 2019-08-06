@@ -25,6 +25,11 @@ class CalculatorStore {
   @computed get result() {
     if (this.expressionInput.length > 0) return eval(this.expressionInput);
   }
+
+  @action.bound
+  clearResult() {
+    this.expressionInput = "";
+  }
 }
 
 export default CalculatorStore;
