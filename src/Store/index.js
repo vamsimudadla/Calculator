@@ -1,4 +1,4 @@
-import { observable, action } from "mobx";
+import { observable, action, computed } from "mobx";
 
 class CalculatorStore {
   @observable expressionInput = "";
@@ -20,6 +20,10 @@ class CalculatorStore {
     if (this.expressionInput.length > 0) {
       this.expressionInput = this.expressionInput.slice(0, -1);
     }
+  }
+
+  @computed get result() {
+    return eval(this.expressionInput);
   }
 }
 
