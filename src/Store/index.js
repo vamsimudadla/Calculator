@@ -5,7 +5,14 @@ class CalculatorStore {
 
   @action.bound
   addCharToExpressionInput(char) {
-    this.expressionInput = this.expressionInput + char;
+    if (this.isValidChar(char))
+      this.expressionInput = this.expressionInput + char;
+  }
+
+  isValidChar(char) {
+    const lastChar = this.expressionInput[this.expressionInput.length - 1];
+    if (char === lastChar) return false;
+    return true;
   }
 }
 
