@@ -9,7 +9,8 @@ import { Container, Wrapper } from "./styledComponents";
 @observer
 class Calculator extends Component {
   render() {
-    const { isResultCalculated, result, expressionInput } = calculatorStore;
+    const { isResultCalculated, expressionInput } = calculatorStore;
+    const result = calculatorStore.result();
     return (
       <Container>
         <Wrapper>

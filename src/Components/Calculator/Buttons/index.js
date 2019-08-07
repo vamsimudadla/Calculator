@@ -7,7 +7,7 @@ class Buttons extends Component {
     const { calculatorStore } = this.props;
     if (char === "Del") calculatorStore.deleteCharFromExpressionInput();
     else if (char === "c") calculatorStore.clearResult();
-    else if (char === "=") calculatorStore.updateExpression();
+    else if (char === "=") calculatorStore.updateResultState();
     else calculatorStore.addCharToExpressionInput(char);
   };
   displayButtons = () => {
